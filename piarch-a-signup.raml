@@ -1,0 +1,60 @@
+#%RAML 1.0
+title: signUp
+baseUri: http://api.piarch-a-signup.com/
+
+documentation:
+  - title: Welcome
+    content: |
+      Welcome to the Example Documentation. The Example API allows you
+      to do stuff. See also [example.com](https://www.example.com).
+  - title: Chapter two
+    content: |
+      More content here. Including **bold** text!
+
+schemas:
+ - signup: |
+      {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+          },
+        "token": {
+          "type": "string"
+          }
+      }
+      }
+/signup:
+    description: |
+    returns tokens and id & password
+  get:
+    description: Parametre yok.
+    queryParameters:
+      exchangeId:
+        description:
+        type: integer
+        required: false
+        example: 9
+      marketCode:
+        description:
+        type: string
+        required: false
+        example: O
+    responses:
+      200:
+        description:
+        body:
+          application/json:
+            schema: token
+            example: |
+             {
+             "username": "korburak",
+             "password": "123456",
+             "token": "eyJhbGciOi.eyJzdWIiOiJrb3Jid.La0DZMbwEl6RDL3Q"
+             }
+      400:
+        description: |
+          Bad Request

@@ -1,0 +1,40 @@
+#%RAML 1.0
+title: signUp
+version: 1
+baseUri: http://api.piarch-a-token.com/{version}
+documentation:
+  - title: Welcome
+    content: |
+      Welcome to the Token Documentation.
+
+
+/login:
+  description: Gives you a token if registered
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+           type: | # structural definition of a response (schema or type)
+            {
+            "type": "object",
+            "properties": {
+             "authenticated": {
+               "type": "boolean"
+             },
+             "token": {
+               "type": "string"
+               }
+            }
+            }
+          example: |
+              {
+              "authenticated": "true",
+              "token": "eyJhbGciOi.eyJzdWIiOiJrb3Jid.La0DZMbwEl6RDL3Q"
+              }
+      400:
+        description: |
+         Bad Request
+      401:
+        description: |
+         Unauthorized
