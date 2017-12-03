@@ -11,6 +11,12 @@ documentation:
 /login:
   description: Gives you a token if registered
   get:
+    queryParameters:
+      username_password:
+        description: "The username-password of the user with jwt keyword"
+        example: "authorization : jwt korburak:123456"
+        required: true
+        type: string
     responses:
       200:
         body:

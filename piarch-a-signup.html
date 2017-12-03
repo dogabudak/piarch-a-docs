@@ -166,19 +166,23 @@
       .resource-modal li > ul {
         margin-bottom: 1em;
       }
-    </style></head><body data-spy="scroll" data-target="#sidebar"><div class="container"><div class="row"><div class="col-md-9" role="main"><div class="page-header"><h1>signUp API documentation <small>version 1</small></h1><p>http://api.piarch-a-token.com/{version}</p><ul><li><strong>version</strong>: <em>required (1)</em></li></ul><h3 id="welcome"><a href="#welcome">Welcome</a></h3><p>Welcome to the Token Documentation.</p></div><div class="panel panel-default"><div class="panel-heading"><h3 id="login" class="panel-title">/login</h3></div><div class="panel-body"><div class="top-resource-description"><p>Gives you a token if registered</p></div><div class="panel-group"><div class="panel panel-white resource-modal"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_login"><span class="parent"></span>/login</a> <span class="methods"><a href="#login_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_login" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#login_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="login_get"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent"></span>/login</h4></div><div class="modal-body"><ul class="nav nav-tabs"><li class="active"><a href="#login_get_request" data-toggle="tab">Request</a></li><li><a href="#login_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="login_get_request"><h3>Query Parameters</h3><ul><li><strong>username_password</strong>: <em>required (string)</em><p>The username-password of the user with jwt keyword</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>authorization : jwt korburak:123456</code></pre></div></li></ul></div><div class="tab-pane" id="login_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>:</p><pre><code>{
+    </style></head><body data-spy="scroll" data-target="#sidebar"><div class="container"><div class="row"><div class="col-md-9" role="main"><div class="page-header"><h1>signUp API documentation <small>version 1</small></h1><p>http://api.piarch-a-signup.com/</p><h3 id="welcome"><a href="#welcome">Welcome</a></h3><p>Welcome to the Sign-up Documentation.</p></div><div class="panel panel-default"><div class="panel-heading"><h3 id="signup" class="panel-title">/signup</h3></div><div class="panel-body"><div class="top-resource-description"><p>System signup</p></div><div class="panel-group"><div class="panel panel-white resource-modal"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_signup"><span class="parent"></span>/signup</a> <span class="methods"><a href="#signup_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_signup" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#signup_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="signup_get"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent"></span>/signup</h4></div><div class="modal-body"><ul class="nav nav-tabs"><li class="active"><a href="#signup_get_request" data-toggle="tab">Request</a></li><li><a href="#signup_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="signup_get_request"><h3>Query Parameters</h3><ul><li><strong>username_password</strong>: <em>required (string)</em><p>The username-password of the user</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>korburak:123456</code></pre></div></li></ul></div><div class="tab-pane" id="signup_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>:</p><pre><code>{
 "type": "object",
 "properties": {
- "authenticated": {
-   "type": "boolean"
- },
- "token": {
-   "type": "string"
-   }
+  "username": {
+    "type": "string"
+  },
+  "password": {
+    "type": "string"
+    },
+  "token": {
+    "type": "string"
+    }
 }
 }
 </code></pre><p><strong>Media type</strong>: example</p><p><strong>Type</strong>:</p><pre><code>{
-"authenticated": "true",
+"username": "korburak",
+"password": "123456",
 "token": "eyJhbGciOi.eyJzdWIiOiJrb3Jid.La0DZMbwEl6RDL3Q"
 }
-</code></pre><h2>HTTP status code <a href="http://httpstatus.es/400" target="_blank">400</a></h2><p>Bad Request</p><h2>HTTP status code <a href="http://httpstatus.es/401" target="_blank">401</a></h2><p>Unauthorized</p></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#login">/login</a></li></ul></div></div></div></div></body></html>
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/400" target="_blank">400</a></h2><p>Bad Request</p></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#signup">/signup</a></li></ul></div></div></div></div></body></html>

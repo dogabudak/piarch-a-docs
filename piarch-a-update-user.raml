@@ -10,11 +10,11 @@ documentation:
   description: System signup
   get:
     queryParameters:
-     username_password:
-      description: "The username-password of the user "
-      example: "korburak:123456"
-      required: true
-      type: string
+        access_token:
+          description: "The access token provided by the authentication application"
+          example: "eyJhbGciOiJIUzI1NiI.eyJzdWIiOiIxMjM0NTY.TJVA95OrM7E2cBab30RM"
+          required: true
+          type: string
     responses:
       200:
        body:
@@ -23,22 +23,12 @@ documentation:
           {
           "type": "object",
           "properties": {
-            "username": {
-              "type": "string"
-            },
-            "password": {
-              "type": "string"
-              },
-            "token": {
-              "type": "string"
-              }
+            "answer":"boolean"
           }
           }
         example: |
           {
-          "username": "korburak",
-          "password": "123456",
-          "token": "eyJhbGciOi.eyJzdWIiOiJrb3Jid.La0DZMbwEl6RDL3Q"
+          "answer":true
           }
       400:
         description: |
