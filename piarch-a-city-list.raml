@@ -1,0 +1,62 @@
+#%RAML 1.0
+title: CityList
+baseUri: http://api.piarch-a-city-list.com/
+version : 1
+documentation:
+  - title: Welcome
+    content: |
+      Welcome to the City-list Documentation.
+/cityList:
+  description: Get available cities
+  get:
+    queryParameters:
+        access_token:
+          description: "The access token provided by the authentication application"
+          example: "eyJhbGciOiJIUzI1NiI.eyJzdWIiOiIxMjM0NTY.TJVA95OrM7E2cBab30RM"
+          required: true
+          type: string
+    responses:
+      200:
+       body:
+        application/json:
+         type: |
+          {
+          "type": "object",
+          "properties": {
+            "cities":"Array"
+          }
+          }
+        example: |
+          {
+          "cities":['Istanbul']
+          }
+      400:
+        description: |
+          Bad Request
+/featuredList:
+  description: Get futured cities
+  get:
+    queryParameters:
+        access_token:
+          description: "The access token provided by the authentication application"
+          example: "eyJhbGciOiJIUzI1NiI.eyJzdWIiOiIxMjM0NTY.TJVA95OrM7E2cBab30RM"
+          required: true
+          type: string
+    responses:
+      200:
+       body:
+        application/json:
+         type: |
+          {
+          "type": "object",
+          "properties": {
+            "cities":"Array"
+          }
+          }
+        example: |
+          {
+          "cities":['Munich']
+          }
+      400:
+        description: |
+          Bad Request
